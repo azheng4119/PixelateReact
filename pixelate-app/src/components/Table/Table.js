@@ -3,20 +3,11 @@ import React, {Component} from 'react';
 import "./Table.css";
 
 class Table extends Component {
-    constructor(props) {
-        super(props);
-        this.setState= {
-            row: this.props.row,
-            column: this.props.column
-            
-        }
-    }
-    
     createTable = () => {
         let table = []
-        for(let i = 0; i < 5; i++) {
+        for(let i = 0; i < this.props.row; i++) {
             let children = []
-            for(let j = 0; j < 5; j++) {
+            for(let j = 0; j < this.props.column; j++) {
                 children.push(<td>"MOM"</td>)
             }
             table.push(<tr>{children}</tr>)
@@ -27,7 +18,7 @@ class Table extends Component {
         
         return (
             <div className = "main-table">
-                {this.createTable}
+                {this.createTable()}
             </div>
         );
     }

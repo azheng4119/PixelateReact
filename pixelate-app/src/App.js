@@ -14,15 +14,24 @@ class App extends Component {
     }  
 }
   handleAddRow = () => {
+    let col = this.state.column;
+    if (col === 0){
+      col = 1;
+    }
     this.setState({
-        row: this.state.row +1
+        row: this.state.row +1,
+        column : col 
     })
-    console.log(this.state.row);
   }
 
   handleAddColumn = () => {
+    let ro = this.state.row;
+    if (ro === 0){
+      ro = 1;
+    }
     this.setState({
-        column: this.state.column +1
+        column: this.state.column +1,
+        row : ro
     })
     console.log(this.state.column);
   }
@@ -33,8 +42,8 @@ class App extends Component {
       <header className="App-header">
         <h1>Pixelate</h1>
         <NavBar addRow = {this.handleAddRow} addColumn = {this.handleAddColumn}/>
-        <Table row = {this.state.row} column = {this.state.column}/>
       </header>
+      <Table row = {this.state.row} column = {this.state.column}/>
     </div>
     );
   }
