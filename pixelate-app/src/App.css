@@ -1,9 +1,11 @@
 .App {
   text-align: center;
+  background-color: black;
+  height: 100vh;
 }
 
 .App-header {
-  background-color: #282c34;
+  background-color: black;
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -16,6 +18,10 @@
   color: #61dafb;
 }
 
+.main-table {
+  padding-top: 15px;
+}
+
 @keyframes App-logo-spin {
   from {
     transform: rotate(0deg);
@@ -23,4 +29,21 @@
   to {
     transform: rotate(360deg);
   }
+}
+
+@font-face {
+  font-family: 'silkscreen_expandednormal';
+  src: url('./assets/slkscre-webfont.woff2') format('woff2'),
+       url('./assets/slkscre-webfont.woff') format('woff');
+  font-weight: normal;
+  font-style: normal;
+
+}
+
+h2 {
+  font-family: 'silkscreen_expandednormal';
+  font-weight:normal;
+  font-style:normal;
+  color: white;
+  font-size: 30px;
 }

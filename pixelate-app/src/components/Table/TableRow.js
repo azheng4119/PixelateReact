@@ -8,7 +8,7 @@ class TableRow extends Component{
         for (let i = 0; i < this.props.col; i++){
             rows.push(<TableCell color = {this.props.color} changeColor = {this.props.changeColor}></TableCell>)
         }
-        return <tr>
+        return <tr >
             {rows}
         </tr>
     }

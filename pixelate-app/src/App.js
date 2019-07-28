@@ -10,8 +10,8 @@ class App extends Component {
     this.state= {
         row: 0,
         column: 0,
-        color: "black",
-        changeToColor: "black"
+        color: "whitesmoke",
+        changeToColor: "whitesmoke"
     }  
 }
   handleAddRow = () => {
@@ -37,6 +37,26 @@ class App extends Component {
     console.log(this.state.column);
   }
 
+  handleRemoveRow = () => {
+    if(this.state.row === 0) {
+      return;
+    }
+    this.setState ({
+      row: this.state.row -1
+    })
+    
+  }
+
+  handleRemoveColumn = () => {
+    if(this.state.column === 0) {
+      return;
+    }
+    this.setState ({
+      column: this.state.column -1
+    })
+    
+  }
+
   changeColor = event =>{
     this.setState({
         changeToColor : event.target.value
@@ -51,10 +71,12 @@ class App extends Component {
     return (
     <div className="App">
       <header className="App-header">
-        <h1>Pixelate</h1>
-        <NavBar changeColor = {this.changeColor} addRow = {this.handleAddRow} addColumn = {this.handleAddColumn}/>
+        <h2>Pixelate</h2>
+        <NavBar changeColor = {this.changeColor} addRow = {this.handleAddRow} addColumn = {this.handleAddColumn} removeRow = {this.handleRemoveRow} removeCol = {this.handleRemoveColumn}/>
       </header>
-      <Table row = {this.state.row} column = {this.state.column} color = {this.state.color} changeColor = {this.returnColor}/>
+      <div className = "main-table">
+        <Table row = {this.state.row} column = {this.state.column} color = {this.state.color} changeColor = {this.returnColor}/>
+      </div>
     </div>
     
     );
