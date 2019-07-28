@@ -15,7 +15,7 @@ class TableCell extends Component{
         })
     }
     render(){
-        return <td onClick = {this.handleColor} style={{backgroundColor: this.state.color}}>
+        return <td onClick = {this.handleColor} style={{backgroundColor: this.state.color,color: this.state.color}}>
             Cell
         </td>
     }
