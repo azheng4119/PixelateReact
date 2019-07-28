@@ -1,5 +1,4 @@
 import React , {Component} from 'react';
-import logo from './logo.svg';
 import NavBar from './components/NavBar/Nav';
 import Table from './components/Table/Table';
 import './App.css';
@@ -10,7 +9,9 @@ class App extends Component {
     super(props);
     this.state= {
         row: 0,
-        column: 0
+        column: 0,
+        color: "black",
+        changeToColor: "black"
     }  
 }
   handleAddRow = () => {
@@ -36,15 +37,26 @@ class App extends Component {
     console.log(this.state.column);
   }
 
+  changeColor = event =>{
+    this.setState({
+        changeToColor : event.target.value
+    })
+  }
+
+  returnColor = () =>{
+    return this.state.changeToColor;
+  }
+
   render () {
     return (
     <div className="App">
       <header className="App-header">
         <h1>Pixelate</h1>
-        <NavBar addRow = {this.handleAddRow} addColumn = {this.handleAddColumn}/>
+        <NavBar changeColor = {this.changeColor} addRow = {this.handleAddRow} addColumn = {this.handleAddColumn}/>
       </header>
-      <Table row = {this.state.row} column = {this.state.column}/>
+      <Table row = {this.state.row} column = {this.state.column} color = {this.state.color} changeColor = {this.state.changeToColor}/>
     </div>
+    
     );
   }
 }

@@ -1,25 +1,16 @@
 import React, {Component} from 'react';
 // import TableElement from "./TableElement/TableElement";
 import "./Table.css";
+import TableRow from './TableRow';
 
 class Table extends Component {
-    createTable = () => {
-        let table = []
-        for(let i = 0; i < this.props.row; i++) {
-            let children = []
-            for(let j = 0; j < this.props.column; j++) {
-                children.push(<td>"MOM"</td>)
-            }
-            table.push(<tr>{children}</tr>)
-        }
-        return table;
-    }
     render () {
-        
+        let Table = [];
+        for (let i = 0; i < this.props.row; i++){
+            Table.push(<TableRow col = {this.props.column} color = {this.props.color} changeColor = {this.props.changeColor}></TableRow >)
+        }
         return (
-            <div className = "main-table">
-                {this.createTable()}
-            </div>
+                Table
         );
     }
 
