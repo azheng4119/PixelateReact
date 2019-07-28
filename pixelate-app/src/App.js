@@ -54,7 +54,7 @@ class App extends Component {
         <h1>Pixelate</h1>
         <NavBar changeColor = {this.changeColor} addRow = {this.handleAddRow} addColumn = {this.handleAddColumn}/>
       </header>
-      <Table row = {this.state.row} column = {this.state.column} color = {this.state.color} changeColor = {this.state.changeToColor}/>
+      <Table row = {this.state.row} column = {this.state.column} color = {this.state.color} changeColor = {this.returnColor}/>
     </div>
     
     );

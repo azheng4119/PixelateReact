@@ -6,12 +6,12 @@ class TableCell extends Component{
         super(props);
         this.state = {
             color: this.props.color,
-            changeColor: this.props.changeColor
+            changeColor: this.props.changeColor()
         }
     }
     handleColor = () => {
         this.setState({
-            color: "white"
+            color: this.props.changeColor()
         })
     }
     render(){
