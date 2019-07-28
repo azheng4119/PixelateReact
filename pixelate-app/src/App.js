@@ -11,7 +11,7 @@ class App extends Component {
         row: 0,
         column: 0,
         color: "whitesmoke",
-        changeToColor: "whitesmoke"
+        changeToColor: "black"
     }  
 }
   handleAddRow = () => {
