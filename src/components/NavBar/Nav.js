@@ -10,7 +10,7 @@ class NavBar extends Component {
                 <button onClick = {this.props.addColumn}>Add Column</button>
                 <button onClick={this.props.removeRow}> Remove Row</button>
                 <button onClick={this.props.removeCol}> Remove Column</button>
-                <select defaultValue = "black" onChange = {this.props.changeColor}>
+                <select defaultValue = "whitesmoke" onChange = {this.props.changeColor}>
                     <option value="red">Red</option>
                     <option value="blue">Blue</option>
                     <option value="black">Black</option>

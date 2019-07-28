@@ -15,9 +15,10 @@ class TableCell extends Component{
         })
     }
     render(){
-        return <td onMouseOver = {this.handleColor} style={{backgroundColor: this.state.color,color: this.state.color, width:"50px", height:"50px", border:"1px solid black", textAlign:"right"}}>
+        return <td onMouseOver = {this.handleColor} 
+                style={{backgroundColor: this.state.color,color: this.state.color, width:"50px", height:"50px", border:"1px solid black"}}>
             
-        </td>
+                </td>
     }
 }
 
